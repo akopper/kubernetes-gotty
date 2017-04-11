@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  kubernetes-gotty:
+    container_name: kubernetes-gotty
+    image: akopper/kubernetes-gotty:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - BASIC_AUTH_USER=user
+      - BASIC_AUTH_PASS=pass
+    restart: always
+    mem_limit: 500m
+    cpu_shares: 50
