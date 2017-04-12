@@ -15,7 +15,7 @@ ENV PATH $GOPATH/bin:$PATH
 
 RUN go get github.com/yudai/gotty
 
-RUN export TERM=xterm
+ENV TERM xterm
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
